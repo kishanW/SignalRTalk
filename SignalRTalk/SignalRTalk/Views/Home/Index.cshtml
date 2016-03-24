@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>SignalR Talk</h1>
+    <p>
+        <h4>
+            #SuchSignalsSoManyResponses  <br/>
+            #aaahmagawd<br />
+            #youWantThis<br />
+        </h4>
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-lg-4" id="registration">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" id="name" placeholder="your name" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <textarea name="comment" id="comment" rows="2" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <a id="register" href="#" class="btn btn-default">Send Comment</a>
+        </div>
+    </div>
+
+
+
+    <div class="col-lg-8">
+        <h3>Registered Clients</h3>
+        <ul id="registeredClients">
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
+<script src="~/Scripts/jquery.signalR-2.2.0.min.js"></script>
+<script src="~/Scripts/MyScript.js"></script>
+
+
+
+<style>
+    #registeredClients {
+        display: inline-block;
+        width: 100%;
+        list-style: none;
+        background-color: #4A89DC;
+        margin: 0;
+        padding: 0;
+    }
+    #registeredClients li {
+        display: inline-block;
+        width: 100%;
+        float: left;
+        padding: 5px 10px;
+        color: #eee;
+    }
+    #registeredClients li:nth-child(even) {
+        background-color: rgba(0,0,0,0.2);
+    }
+    #registeredClients li p {
+        display: inline-block;
+        width: 50%;
+        float: left;
+        margin: 0;
+    }
+    #registeredClients li p b {
+        font-size: 16px;
+    }
+     .minimap {
+         display: inline-block;
+         width: 50%;
+         float: right;
+     }
+</style>
