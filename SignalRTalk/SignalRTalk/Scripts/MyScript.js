@@ -55,7 +55,6 @@
 
             msg.text();
             clientItem.append(msg);
-            //https://www.google.com/maps/preview/@<latitude>,<longitude>,<zoom level>z
             var miniMap = "<iframe frameborder='0' class='minimap' src='http://maps.google.com/maps?q=" + clients[i].Lat + "," + clients[i].Lng + "&output=embed&iwloc=0' allowfullscreen></iframe>";
             clientItem.append(miniMap);
 
