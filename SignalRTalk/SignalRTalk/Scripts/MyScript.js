@@ -31,6 +31,9 @@
         var lng = "N/A";
         var lat = "N/A";
 
+        $("#name").val("");
+        $("#comment").val("");
+
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function (position) {
                 lat = position.coords.latitude;
@@ -44,6 +47,7 @@
 
     window.ShowClientList = function (clients) {
         console.log(clients);
+        $("#registeredClients").html("");
 
         for (var i = 0; i < clients.length; i++) {
             var clientItem = $("<li></li>");
